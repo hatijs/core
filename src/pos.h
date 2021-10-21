@@ -4,9 +4,9 @@
 /**
  * char swe_version(char *)
  * =>
- * node_swe_version: () => void
+ * node_swe_version: () => string
  */
-Napi::Function::VoidCallback node_swe_version(const Napi::CallbackInfo& info);
+Napi::String node_swe_version(const Napi::CallbackInfo& info);
 
 /**
  * int32 swe_calc_ut(double tjd_ut, int32 ipl, int32 iflag, double *xx, char *serr)
@@ -135,9 +135,9 @@ Napi::Object node_swe_fixstar2_mag(const Napi::CallbackInfo& info);
 /**
  * void swe_close(void)
  * =>
- * node_swe_close: () => void
+ * node_swe_close: () => {}
  */
-Napi::Function::VoidCallback node_swe_close(const Napi::CallbackInfo& info);
+Napi::Object node_swe_close(const Napi::CallbackInfo& info);
 
 /**
  * void swe_set_ephe_path(char *path)
@@ -163,16 +163,16 @@ Napi::String node_swe_get_planet_name(const Napi::CallbackInfo& info);
 /**
  * void swe_set_topo(double geolon, double geolat, double geoalt)
  * =>
- * node_swe_set_topo: (geolon: number, geolat: number) => void
+ * node_swe_set_topo: (geolon: number, geolat: number) => {}
  */
-Napi::Function::VoidCallback node_swe_set_topo(const Napi::CallbackInfo& info);
+Napi::Object node_swe_set_topo(const Napi::CallbackInfo& info);
 
 /**
  * void swe_set_sid_mode(int32 sid_mode, double t0, double ayan_t0)
  * =>
- * node_swe_set_sid_mode: (sid_mode: number, t0: number, ayan_t0: number) => void
+ * node_swe_set_sid_mode: (sid_mode: number, t0: number, ayan_t0: number) => {}
  */
-Napi::Function::VoidCallback node_swe_set_sid_mode(const Napi::CallbackInfo& info);
+Napi::Object node_swe_set_sid_mode(const Napi::CallbackInfo& info);
 
 /**
  * double swe_get_ayanamsa(double tjd_et)
