@@ -5,6 +5,7 @@
       "sources": [
         "src/swisseph.cc",
         "src/date.cc",
+				"src/eclipse.cc",
         "src/hel.cc",
         "src/house.cc",
         "src/pos.cc",

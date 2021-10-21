@@ -17,6 +17,26 @@ Napi::Object init(Napi::Env env, Napi::Object exports) {
 	/**
    * ECLIPSE
    */
+	exports.Set(Napi::String::New(env, "node_swe_gauquelin_sector"), Napi::Function::New(env, node_swe_gauquelin_sector));
+	exports.Set(Napi::String::New(env, "node_swe_sol_eclipse_where"), Napi::Function::New(env, node_swe_sol_eclipse_where));
+	exports.Set(Napi::String::New(env, "node_swe_lun_occult_where"), Napi::Function::New(env, node_swe_lun_occult_where));
+	exports.Set(Napi::String::New(env, "node_swe_sol_eclipse_how"), Napi::Function::New(env, node_swe_sol_eclipse_how));
+	exports.Set(Napi::String::New(env, "node_swe_sol_eclipse_when_loc"), Napi::Function::New(env, node_swe_sol_eclipse_when_loc));
+	exports.Set(Napi::String::New(env, "node_swe_lun_occult_when_loc"), Napi::Function::New(env, node_swe_lun_occult_when_loc));
+	exports.Set(Napi::String::New(env, "node_swe_sol_eclipse_when_glob"), Napi::Function::New(env, node_swe_sol_eclipse_when_glob));
+	exports.Set(Napi::String::New(env, "node_swe_lun_occult_when_glob"), Napi::Function::New(env, node_swe_lun_occult_when_glob));
+	exports.Set(Napi::String::New(env, "node_swe_lun_eclipse_how"), Napi::Function::New(env, node_swe_lun_eclipse_how));
+	exports.Set(Napi::String::New(env, "node_swe_lun_eclipse_when"), Napi::Function::New(env, node_swe_lun_eclipse_when));
+	exports.Set(Napi::String::New(env, "node_swe_lun_eclipse_when_loc"), Napi::Function::New(env, node_swe_lun_eclipse_when_loc));
+	exports.Set(Napi::String::New(env, "node_swe_pheno"), Napi::Function::New(env, node_swe_pheno));
+	exports.Set(Napi::String::New(env, "node_swe_pheno_ut"), Napi::Function::New(env, node_swe_pheno_ut));
+	exports.Set(Napi::String::New(env, "node_swe_refrac"), Napi::Function::New(env, node_swe_refrac));
+	exports.Set(Napi::String::New(env, "node_swe_refrac_extended"), Napi::Function::New(env, node_swe_refrac_extended));
+	exports.Set(Napi::String::New(env, "node_swe_set_lapse_rate"), Napi::Function::New(env, node_swe_set_lapse_rate));
+	exports.Set(Napi::String::New(env, "node_swe_azalt"), Napi::Function::New(env, node_swe_azalt));
+	exports.Set(Napi::String::New(env, "node_swe_azalt_rev"), Napi::Function::New(env, node_swe_azalt_rev));
+	exports.Set(Napi::String::New(env, "node_swe_rise_trans"), Napi::Function::New(env, node_swe_rise_trans));
+	exports.Set(Napi::String::New(env, "node_swe_rise_trans_true_hor"), Napi::Function::New(env, node_swe_rise_trans_true_hor));
 
 
   /**
