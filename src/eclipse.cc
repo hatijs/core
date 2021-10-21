@@ -281,9 +281,9 @@ Napi::Object node_swe_refrac_extended(const Napi::CallbackInfo& info);
 /**
  * void swe_set_lapse_rate(double lapse_rate)
  * =>
- * node_swe_set_lapse_rate: (lapse_rate: number) => void
+ * node_swe_set_lapse_rate: (lapse_rate: number) => {}
  */
-Napi::Function::VoidCallback node_swe_set_lapse_rate(const Napi::CallbackInfo& info);
+Napi::Object node_swe_set_lapse_rate(const Napi::CallbackInfo& info) {
 
 /**
  * void swe_azalt(double tjd_ut, int32 calc_flag, double *geopos, double atpress, double attemp, double *xin, double *xaz)
