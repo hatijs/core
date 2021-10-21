@@ -180,7 +180,7 @@ Napi::Number node_swe_day_of_week(const Napi::CallbackInfo& info);
 /**
  * char * swe_cs2timestr(CSEC t, int sep, AS_BOOL suppressZero, char *a)
  * =>
- * node_swe_cs2timestr: (t: number, sep: number, suppressZero: boolean) => string
+ * node_swe_cs2timestr: (t: number, sep: number, suppressZero: number) => string
  */
 Napi::String node_swe_cs2timestr(const Napi::CallbackInfo& info);
 
