@@ -105,3 +105,6 @@ dist
 
 # Gyp build output
 build
+
+# VSCode setting directory
+.vscode
