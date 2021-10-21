@@ -9,22 +9,6 @@
 Napi::String node_swe_version(const Napi::CallbackInfo& info);
 
 /**
- * int32 swe_calc_ut(double tjd_ut, int32 ipl, int32 iflag, double *xx, char *serr)
- * =>
- * node_swe_calc_ut: (tjd_ut: number, ipl: number, iflag: number) => {
- *   longitude:      | rectAscension:      | x:  number,
- *   latitude:       | declination:        | y:  number,
- *   distance:       | distance:           | z:  number,
- *   longitudeSpeed: | rectAscensionSpeed: | dx: number,
- *   latitudeSpeed:  | declinationSpeed:   | dy: number,
- *   distanceSpeed:  | distanceSpeed:      | dz: number
- * } | {
- *   error:	string
- * }
- */
-Napi::Object node_swe_calc_ut(const Napi::CallbackInfo& info);
-
-/**
  * int32 swe_calc(double tjd, int ipl, int32 iflag, double *xx, char *serr)
  * =>
  * node_swe_calc: (tjd: number, ipl: number, iflag: number) => {
@@ -39,6 +23,22 @@ Napi::Object node_swe_calc_ut(const Napi::CallbackInfo& info);
  * }
  */
 Napi::Object node_swe_calc(const Napi::CallbackInfo& info);
+
+/**
+ * int32 swe_calc_ut(double tjd_ut, int32 ipl, int32 iflag, double *xx, char *serr)
+ * =>
+ * node_swe_calc_ut: (tjd_ut: number, ipl: number, iflag: number) => {
+ *   longitude:      | rectAscension:      | x:  number,
+ *   latitude:       | declination:        | y:  number,
+ *   distance:       | distance:           | z:  number,
+ *   longitudeSpeed: | rectAscensionSpeed: | dx: number,
+ *   latitudeSpeed:  | declinationSpeed:   | dy: number,
+ *   distanceSpeed:  | distanceSpeed:      | dz: number
+ * } | {
+ *   error:	string
+ * }
+ */
+Napi::Object node_swe_calc_ut(const Napi::CallbackInfo& info);
 
 /**
  * int32 swe_fixstar(char *star, double tjd, int32 iflag, double *xx, char *serr)
@@ -163,7 +163,7 @@ Napi::String node_swe_get_planet_name(const Napi::CallbackInfo& info);
 /**
  * void swe_set_topo(double geolon, double geolat, double geoalt)
  * =>
- * node_swe_set_topo: (geolon: number, geolat: number) => {}
+ * node_swe_set_topo: (geolon: number, geolat: number, geoalt: number) => {}
  */
 Napi::Object node_swe_set_topo(const Napi::CallbackInfo& info);
 
