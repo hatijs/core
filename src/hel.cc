@@ -31,12 +31,14 @@ Napi::Object node_swe_heliacal_ut(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
   double dgeo [3] = {0};
 	double datm [4] = {0};
 	double dobs [6] = {0};
 	double dret [50] = {0};
 	char name [AS_MAXCH];
 	char serr [AS_MAXCH];
+
 	long rflag;
 
 	dgeo[0] = info[1].ToObject().Get((uint32_t)0).ToNumber().DoubleValue();
@@ -136,12 +138,14 @@ Napi::Object node_swe_heliacal_pheno_ut(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
   double dgeo [3] = {0};
 	double datm [4] = {0};
 	double dobs [6] = {0};
 	double darr [50] = {0};
 	char name [AS_MAXCH];
 	char serr [AS_MAXCH];
+
 	long rflag;
 
 	dgeo[0] = info[1].ToObject().Get((uint32_t)0).ToNumber().DoubleValue();
@@ -244,12 +248,14 @@ Napi::Object node_swe_vis_limit_mag(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
   double dgeo [3] = {0};
 	double datm [4] = {0};
 	double dobs [6] = {0};
 	double dret [50] = {0};
 	char name [AS_MAXCH];
 	char serr [AS_MAXCH];
+	
 	long rflag;
 
 	dgeo[0] = info[1].ToObject().Get((uint32_t)0).ToNumber().DoubleValue();

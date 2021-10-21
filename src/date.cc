@@ -28,7 +28,9 @@ Napi::Object node_swe_date_conversion(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double tjd;
+
 	int rflag;
 
 	rflag = ::swe_date_conversion(
@@ -106,6 +108,7 @@ Napi::Object node_swe_revjul(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
   int year, month, day;
 	double hour;
 
@@ -153,8 +156,10 @@ Napi::Object node_swe_utc_to_jd(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double tjd[2];
   char serr[AS_MAXCH];
+
   int rflag;
 
 	rflag = ::swe_utc_to_jd(
@@ -206,6 +211,7 @@ Napi::Object node_swe_jdet_to_utc(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	int year, month, day, hour, minute;
 	double second;
 
@@ -252,6 +258,7 @@ Napi::Object node_swe_jdut1_to_utc(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
   int year, month, day, hour, minute;
 	double second;
 
@@ -303,6 +310,7 @@ Napi::Object node_swe_utc_time_zone(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+	
   int year, month, day, hour, minute;
 	double second;
 

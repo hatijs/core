@@ -33,17 +33,19 @@ Napi::Object node_swe_gauquelin_sector(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double dgsect;
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
+
+	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	geopos[0] = info[5].ToNumber().DoubleValue();
 	geopos[1] =	info[6].ToNumber().DoubleValue();
 	geopos[2] = info[7].ToNumber().DoubleValue();
-
-	::strcpy(star, info[2].As<Napi::String>().Utf8Value().c_str());
 
 	rflag = ::swe_gauquelin_sector(
 		info[0].ToNumber().DoubleValue(),
@@ -104,9 +106,11 @@ Napi::Object node_swe_sol_eclipse_where(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	rflag = ::swe_sol_eclipse_where(
@@ -172,13 +176,15 @@ Napi::Object node_swe_lun_occult_where(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double attr[20] = {0};
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
 
-	::strcpy(star, info[2].As<Napi::String>().Utf8Value().c_str());
+	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	rflag = ::swe_lun_occult_where(
 		info[0].ToNumber().DoubleValue(),
@@ -244,9 +250,11 @@ Napi::Object node_swe_sol_eclipse_how(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -322,10 +330,12 @@ Napi::Object node_swe_sol_eclipse_when_loc(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double tret[10] = {0};
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -411,18 +421,20 @@ Napi::Object node_swe_lun_occult_when_loc(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double tret[10] = {0};
 	double attr[20] = {0};
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
+
+	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	geopos[0] = info[4].ToNumber().DoubleValue();
 	geopos[1] =	info[5].ToNumber().DoubleValue();
 	geopos[2] = info[6].ToNumber().DoubleValue();
-
-	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	rflag = ::swe_lun_occult_when_loc(
 		info[0].ToNumber().DoubleValue(),
@@ -493,8 +505,10 @@ Napi::Object node_swe_sol_eclipse_when_glob(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double tret[10] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	rflag = ::swe_sol_eclipse_when_glob(
@@ -559,9 +573,11 @@ Napi::Object node_swe_lun_occult_when_glob(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double tret[10] = {0};
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	::strcpy(star, info[2].ToString().Utf8Value().c_str());
@@ -630,9 +646,11 @@ Napi::Object node_swe_lun_eclipse_how(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -695,8 +713,10 @@ Napi::Object node_swe_lun_eclipse_when(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double tret[10] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	rflag = ::swe_lun_eclipse_when(
@@ -768,10 +788,12 @@ Napi::Object node_swe_lun_eclipse_when_loc(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double tret[10] = {0};
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -841,8 +863,10 @@ Napi::Object node_swe_pheno(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	rflag = ::swe_pheno(
@@ -895,8 +919,10 @@ Napi::Object node_swe_pheno_ut(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double attr[20] = {0};
 	char serr[AS_MAXCH];
+
 	long rflag;
 
 	rflag = ::swe_pheno_ut(
@@ -978,7 +1004,9 @@ Napi::Object node_swe_refrac_extended(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double dret[4] = {0};
+
 	double refrection;
 
 	refrection = ::swe_refrac_extended(
@@ -1056,8 +1084,10 @@ Napi::Object node_swe_azalt(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double xin[3] = {0};
+
 	double xaz[3] = {0};
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -1112,8 +1142,10 @@ Napi::Object node_swe_azalt_rev(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double xin[3] = {0};
+
 	double xout[3] = {0};
 
 	geopos[0] = info[2].ToNumber().DoubleValue();
@@ -1168,17 +1200,19 @@ Napi::Object node_swe_rise_trans(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double tret;
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
+
+	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	geopos[0] = info[5].ToNumber().DoubleValue();
 	geopos[1] =	info[6].ToNumber().DoubleValue();
 	geopos[2] = info[7].ToNumber().DoubleValue();
-
-	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	rflag = ::swe_rise_trans(
 		info[0].ToNumber().DoubleValue(),
@@ -1240,17 +1274,19 @@ Napi::Object node_swe_rise_trans_true_hor(const Napi::CallbackInfo& info) {
   }
 
 	Napi::Object result = Napi::Object::New(env);
+
 	double geopos[10] = {0};
 	double tret;
 	char star[AS_MAXCH];
 	char serr[AS_MAXCH];
+
 	long rflag;
+
+	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	geopos[0] = info[5].ToNumber().DoubleValue();
 	geopos[1] =	info[6].ToNumber().DoubleValue();
 	geopos[2] = info[7].ToNumber().DoubleValue();
-
-	::strcpy(star, info[2].ToString().Utf8Value().c_str());
 
 	rflag = ::swe_rise_trans_true_hor(
 		info[0].ToNumber().DoubleValue(),
