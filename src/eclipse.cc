@@ -79,7 +79,7 @@ Napi::Object node_swe_sol_eclipse_how(const Napi::CallbackInfo& info);
 /**
  * int32 swe_sol_eclipse_when_loc(double tjd_start, int32 ifl, double *geopos, double *tret, double *attr, int32 backward, char *serr)
  * =>
- * node_swe_sol_eclipse_when_loc: (tjd_start: number, ifl: number, longitude: number, latitude: number, height: number, backwar: numberd) => {
+ * node_swe_sol_eclipse_when_loc: (tjd_start: number, ifl: number, longitude: number, latitude: number, height: number, backward: number) => {
  *   maximum:										number,
  *   first:											number,
  *   second:										number,
