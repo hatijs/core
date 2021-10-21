@@ -62,7 +62,30 @@ Napi::Object init(Napi::Env env, Napi::Object exports) {
   /**
    * POS
    */
-
+	exports.Set(Napi::String::New(env, "node_swe_version"), Napi::Function::New(env, node_swe_version));
+	exports.Set(Napi::String::New(env, "node_swe_calc"), Napi::Function::New(env, node_swe_calc));
+	exports.Set(Napi::String::New(env, "node_swe_calc_ut"), Napi::Function::New(env, node_swe_calc_ut));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar"), Napi::Function::New(env, node_swe_fixstar));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar_ut"), Napi::Function::New(env, node_swe_fixstar_ut));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar_mag"), Napi::Function::New(env, node_swe_fixstar_mag));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar2"), Napi::Function::New(env, node_swe_fixstar2));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar2_ut"), Napi::Function::New(env, node_swe_fixstar2_ut));
+	exports.Set(Napi::String::New(env, "node_swe_fixstar2_mag"), Napi::Function::New(env, node_swe_fixstar2_mag));
+	exports.Set(Napi::String::New(env, "node_swe_close"), Napi::Function::New(env, node_swe_close));
+	exports.Set(Napi::String::New(env, "node_swe_set_ephe_path"), Napi::Function::New(env, node_swe_set_ephe_path));
+	exports.Set(Napi::String::New(env, "node_swe_set_jpl_file"), Napi::Function::New(env, node_swe_set_jpl_file));
+	exports.Set(Napi::String::New(env, "node_swe_get_planet_name"), Napi::Function::New(env, node_swe_get_planet_name));
+	exports.Set(Napi::String::New(env, "node_swe_set_topo"), Napi::Function::New(env, node_swe_set_topo));
+	exports.Set(Napi::String::New(env, "node_swe_set_sid_mode"), Napi::Function::New(env, node_swe_set_sid_mode));
+	exports.Set(Napi::String::New(env, "node_swe_get_ayanamsa"), Napi::Function::New(env, node_swe_get_ayanamsa));
+	exports.Set(Napi::String::New(env, "node_swe_get_ayanamsa_ut"), Napi::Function::New(env, node_swe_get_ayanamsa_ut));
+	exports.Set(Napi::String::New(env, "node_swe_get_ayanamsa_ex"), Napi::Function::New(env, node_swe_get_ayanamsa_ex));
+	exports.Set(Napi::String::New(env, "node_swe_get_ayanamsa_ex_ut"), Napi::Function::New(env, node_swe_get_ayanamsa_ex_ut));
+	exports.Set(Napi::String::New(env, "node_swe_get_ayanamsa_name"), Napi::Function::New(env, node_swe_get_ayanamsa_name));
+	exports.Set(Napi::String::New(env, "node_swe_nod_aps"), Napi::Function::New(env, node_swe_nod_aps));
+	exports.Set(Napi::String::New(env, "node_swe_nod_aps_ut"), Napi::Function::New(env, node_swe_nod_aps_ut));
+	exports.Set(Napi::String::New(env, "node_swe_get_orbital_elements"), Napi::Function::New(env, node_swe_get_orbital_elements));
+	exports.Set(Napi::String::New(env, "node_swe_orbit_max_min_true_distance"), Napi::Function::New(env, node_swe_orbit_max_min_true_distance));
 
   /**
    * UTIL
