@@ -1,0 +1,36 @@
+{
+  "name": "hati",
+  "version": "0.0.1",
+  "description": "horoscope astrology tool integration using swissephe",
+  "main": "index.ts",
+  "repository": "git@github.com:devbjun/hati.git",
+  "author": "Bak Jeong Jun <dev_bjun@meshyarn.io>",
+  "license": "AGPL-3.0",
+  "private": false,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "dev": "ts-node-dev --respawn --transpile-only --no-notify ${1}",
+    "eslint": "eslint --ext .js,.ts . lib",
+    "pretty": "prettier --write \"./**/*.{js,ts,jsx,json}\""
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^4.2.0",
+    "rambda": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "prettier": "^2.4.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  }
+}

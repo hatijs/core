@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Gyp build output
+build
+
+# VSCode setting directory
+.vscode
