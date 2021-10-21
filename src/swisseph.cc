@@ -90,6 +90,31 @@ Napi::Object init(Napi::Env env, Napi::Object exports) {
   /**
    * UTIL
    */
+	exports.Set(Napi::String::New(env, "node_swe_deltat"), Napi::Function::New(env, node_swe_deltat));
+	exports.Set(Napi::String::New(env, "node_swe_time_equ"), Napi::Function::New(env, node_swe_time_equ));
+	exports.Set(Napi::String::New(env, "node_swe_sidtime0"), Napi::Function::New(env, node_swe_sidtime0));
+	exports.Set(Napi::String::New(env, "node_swe_sidtime"), Napi::Function::New(env, node_swe_sidtime));
+	exports.Set(Napi::String::New(env, "node_swe_cotrans"), Napi::Function::New(env, node_swe_cotrans));
+	exports.Set(Napi::String::New(env, "node_swe_cotrans_sp"), Napi::Function::New(env, node_swe_cotrans_sp));
+	exports.Set(Napi::String::New(env, "node_swe_get_tid_acc"), Napi::Function::New(env, node_swe_get_tid_acc));
+	exports.Set(Napi::String::New(env, "node_swe_set_tid_acc"), Napi::Function::New(env, node_swe_set_tid_acc));
+	exports.Set(Napi::String::New(env, "node_swe_degnorm"), Napi::Function::New(env, node_swe_degnorm));
+	exports.Set(Napi::String::New(env, "node_swe_radnorm"), Napi::Function::New(env, node_swe_radnorm));
+	exports.Set(Napi::String::New(env, "node_swe_rad_midp"), Napi::Function::New(env, node_swe_rad_midp));
+	exports.Set(Napi::String::New(env, "node_swe_deg_midp"), Napi::Function::New(env, node_swe_deg_midp));
+	exports.Set(Napi::String::New(env, "node_swe_split_deg"), Napi::Function::New(env, node_swe_split_deg));
+	exports.Set(Napi::String::New(env, "node_swe_csnorm"), Napi::Function::New(env, node_swe_csnorm));
+	exports.Set(Napi::String::New(env, "node_swe_difcsn"), Napi::Function::New(env, node_swe_difcsn));
+	exports.Set(Napi::String::New(env, "node_swe_difdegn"), Napi::Function::New(env, node_swe_difdegn));
+	exports.Set(Napi::String::New(env, "node_swe_difcs2n"), Napi::Function::New(env, node_swe_difcs2n));
+	exports.Set(Napi::String::New(env, "node_swe_difdeg2n"), Napi::Function::New(env, node_swe_difdeg2n));
+	exports.Set(Napi::String::New(env, "node_swe_difrad2n"), Napi::Function::New(env, node_swe_difrad2n));
+	exports.Set(Napi::String::New(env, "node_swe_csroundsec"), Napi::Function::New(env, node_swe_csroundsec));
+	exports.Set(Napi::String::New(env, "node_swe_d2l"), Napi::Function::New(env, node_swe_d2l));
+	exports.Set(Napi::String::New(env, "node_swe_day_of_week"), Napi::Function::New(env, node_swe_day_of_week));
+	exports.Set(Napi::String::New(env, "node_swe_cs2timestr"), Napi::Function::New(env, node_swe_cs2timestr));
+	exports.Set(Napi::String::New(env, "node_swe_cs2lonlatstr"), Napi::Function::New(env, node_swe_cs2lonlatstr));
+	exports.Set(Napi::String::New(env, "node_swe_cs2degstr"), Napi::Function::New(env, node_swe_cs2degstr));
 
 
   return exports;
