@@ -1,0 +1,24 @@
+{
+ "name": "hati",
+ "version": "0.0.1",
+ "description": "horoscope astrology tool integration using swissephe",
+ "main": "index.js",
+ "repository": "git@github.com:devbjun/hati.git",
+ "author": "Bak Jeong Jun <dev_bjun@meshyarn.io>",
+ "license": "AGPL-3.0",
+ "private": false,
+ "scripts": {
+  "build": "node-gyp rebuild",
+  "dev": "ts-node-dev --respawn --transpile-only --no-notify ${1}"
+ },
+ "dependencies": {
+  "bindings": "^1.5.0",
+  "node-addon-api": "^4.2.0",
+  "rambda": "^6.9.0"
+ },
+ "devDependencies": {
+  "@types/node": "^16.11.1",
+  "ts-node-dev": "^1.1.8",
+  "typescript": "^4.4.4"
+ }
+}
