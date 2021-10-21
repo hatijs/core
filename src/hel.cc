@@ -15,7 +15,7 @@ Napi::Object node_swe_heliacal_ut(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 
   if (info.Length() != 7) {
-    Napi::Error::New(env, "Wrong number of arguments").ThrowAsJavaScriptException();
+    Napi::Error::New(env, "Wrong number of arguments.").ThrowAsJavaScriptException();
   }
 
   if (
@@ -27,7 +27,7 @@ Napi::Object node_swe_heliacal_ut(const Napi::CallbackInfo& info) {
     !info[5].IsNumber() ||
     !info[6].IsNumber()
   ) {
-    Napi::TypeError::New(env, "Wrong type of arguments").ThrowAsJavaScriptException();
+    Napi::TypeError::New(env, "Wrong type of arguments.").ThrowAsJavaScriptException();
   }
 
 	Napi::Object result = Napi::Object::New(env);
@@ -120,7 +120,7 @@ Napi::Object node_swe_heliacal_pheno_ut(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 
   if (info.Length() != 7) {
-    Napi::Error::New(env, "Wrong number of arguments").ThrowAsJavaScriptException();
+    Napi::Error::New(env, "Wrong number of arguments.").ThrowAsJavaScriptException();
   }
 
   if (
@@ -132,7 +132,7 @@ Napi::Object node_swe_heliacal_pheno_ut(const Napi::CallbackInfo& info) {
     !info[5].IsNumber() ||
     !info[6].IsNumber()
   ) {
-    Napi::TypeError::New(env, "Wrong type of arguments").ThrowAsJavaScriptException();
+    Napi::TypeError::New(env, "Wrong type of arguments.").ThrowAsJavaScriptException();
   }
 
 	Napi::Object result = Napi::Object::New(env);
@@ -217,7 +217,7 @@ Napi::Object node_swe_heliacal_pheno_ut(const Napi::CallbackInfo& info) {
  *   vissualMagnitudeLimit:	number,
  *   AltO:									number,
  *   AziO:									number,
- *   AltS:									number,
+ *   Alts.:									number,
  *   AziS:									number,
  *   AltM:									number,
  *   AziM:									number
@@ -229,7 +229,7 @@ Napi::Object node_swe_vis_limit_mag(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 
   if (info.Length() != 6) {
-    Napi::Error::New(env, "Wrong number of arguments").ThrowAsJavaScriptException();
+    Napi::Error::New(env, "Wrong number of arguments.").ThrowAsJavaScriptException();
   }
 
   if (
@@ -240,7 +240,7 @@ Napi::Object node_swe_vis_limit_mag(const Napi::CallbackInfo& info) {
     !info[4].IsString() ||
     !info[5].IsNumber()
   ) {
-    Napi::TypeError::New(env, "Wrong type of arguments").ThrowAsJavaScriptException();
+    Napi::TypeError::New(env, "Wrong type of arguments.").ThrowAsJavaScriptException();
   }
 
 	Napi::Object result = Napi::Object::New(env);
@@ -284,7 +284,7 @@ Napi::Object node_swe_vis_limit_mag(const Napi::CallbackInfo& info) {
     result.Set("vissualMagnitudeLimit", dret[0]);
     result.Set("AltO", dret[1]);
     result.Set("AziO", dret[2]);
-    result.Set("AltS", dret[3]);
+    result.Set("Alts.", dret[3]);
     result.Set("AziS", dret[4]);
     result.Set("AltM", dret[5]);
     result.Set("AziM", dret[6]);
