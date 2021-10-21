@@ -42,6 +42,9 @@ Napi::Object init(Napi::Env env, Napi::Object exports) {
   /**
    * HEL
    */
+	exports.Set(Napi::String::New(env, "node_swe_heliacal_ut"), Napi::Function::New(env, node_swe_heliacal_ut));
+	exports.Set(Napi::String::New(env, "node_swe_heliacal_pheno_ut"), Napi::Function::New(env, node_swe_heliacal_pheno_ut));
+	exports.Set(Napi::String::New(env, "node_swe_vis_limit_mag"), Napi::Function::New(env, node_swe_vis_limit_mag));
 
 
   /**
