@@ -3,7 +3,7 @@
 /**
  * int swe_date_conversion(int y, int m, int d, double utime, char gregflag, double *tjd)
  * =>
- * node_swe_date_conversion: (year: number, month: number, day: number, hour: number, gregflag: number) => {
+ * node_swe_date_conversion: (year: number, month: number, day: number, hour: number, gregflag: string) => {
  *   julianDay:	number
  * } | {
  *   error:	string
