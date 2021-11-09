@@ -142,6 +142,7 @@ declare namespace Constant {
   export const SEFLG_DPSIDEPS_1980 = 262144; // = 256*1024
   export const SEFLG_JPLHOR = 262144; // = SEFLG_DPSIDEPS_1980
   export const SEFLG_JPLHOR_APPROX = 524288; // = 512*1024
+	export const SEFLG_CENTER_BODY = 1048576; // = 1024*1024
   export const SEFLG_DEFAULTEPH = 2; // = SEFLG_SWIEPH
 
   // Sidereal modes

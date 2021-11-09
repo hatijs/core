@@ -142,6 +142,7 @@ swisseph.SEFLG_ICRS = 128 * 1024; // ICRS (DE406 reference frame)
 swisseph.SEFLG_DPSIDEPS_1980 = 256 * 1024; // reproduce JPL Horizons 1962 - today to 0.002 arcsec.
 swisseph.SEFLG_JPLHOR = swisseph.SEFLG_DPSIDEPS_1980;
 swisseph.SEFLG_JPLHOR_APPROX = 512 * 1024; // approximate JPL Horizons 1962 - today
+swisseph.SEFLG_CENTER_BODY = 1024 * 1024; // calculate position of center of body (COB) of planet, not barycenter of its system
 
 swisseph.SE_SIDBITS = 256;
 swisseph.SE_SIDBIT_ECL_T0 = 256; // for projection onto ecliptic of t0
