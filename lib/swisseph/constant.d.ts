@@ -74,6 +74,7 @@ declare namespace Constant {
   export const SE_VESTA = 20;
 
   export const SE_NPLANETS = 23;
+	export const SE_PLMOON_OFFSET = 9000;
   export const SE_AST_OFFSET = 10000;
   export const SE_VARUNA = 30000; // = SE_AST_OFFSET + 20000
   export const SE_FICT_OFFSET = 40;

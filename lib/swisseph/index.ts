@@ -58,6 +58,7 @@ swisseph.SE_VESTA = 20;
 
 swisseph.SE_NPLANETS = 23;
 
+swisseph.SE_PLMOON_OFFSET = 9000;
 swisseph.SE_AST_OFFSET = 10000;
 swisseph.SE_VARUNA = swisseph.SE_AST_OFFSET + 20000;
 
