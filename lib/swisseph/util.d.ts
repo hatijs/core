@@ -6,14 +6,14 @@ declare namespace Util {
    * @param tjd The Julian day.
    * @returns The result of the computation.
    */
-  export function node_node_swe_deltat(tjd: number): number;
+  export function node_swe_deltat(tjd: number): number;
 
   /**
    * Returns the difference between local apparent and local mean time.
    * @param tjd The Julian day.
    * @returns The result of the computation or an error.
    */
-  export function node_node_swe_time_equ(
+  export function node_swe_time_equ(
     tjd: number
   ): { timeEquation: number } | { error: string };
 
@@ -24,7 +24,7 @@ declare namespace Util {
    * @param nut The nutation.
    * @returns Sidereal time at the Greenwich Meridian, measured in hours.
    */
-  export function node_node_swe_sidtime0(
+  export function node_swe_sidtime0(
     tjd_ut: number,
     eps: number,
     nut: number
@@ -35,7 +35,7 @@ declare namespace Util {
    * @param tjd_ut The Julian day.
    * @returns Sidereal time at the Greenwich Meridian, measured in hours.
    */
-  export function node_node_swe_sidtime(tjd_ut: number): number;
+  export function node_swe_sidtime(tjd_ut: number): number;
 
   /**
    * Coordinate transformation, from ecliptic to equator or vice-versa.
@@ -46,7 +46,7 @@ declare namespace Util {
    * @param eps Obliquity of ecliptic, in degrees.
    * @returns Result of the conversion. 3 doubles: long., lat., dist.
    */
-  export function node_node_swe_cotrans(
+  export function node_swe_cotrans(
     xpo: number[],
     eps: number
   ): {
@@ -64,7 +64,7 @@ declare namespace Util {
    * @param eps Obliquity of ecliptic, in degrees.
    * @returns Result of the conversion. 6 doubles, position and speed in new coordinate system.
    */
-  export function node_node_swe_cotrans_sp(
+  export function node_swe_cotrans_sp(
     xpo: number[],
     eps: number
   ): {
@@ -77,31 +77,31 @@ declare namespace Util {
   };
 
   /**
-   * Returns the tidal acceleration used in node_node_swe_deltat().
+   * Returns the tidal acceleration used in node_swe_deltat().
    * @returns The tidal acceleration.
    */
-  export function node_node_swe_get_tid_acc(): number;
+  export function node_swe_get_tid_acc(): number;
 
   /**
-   * Sets the tidal acceleration to be used in node_node_swe_deltat().
+   * Sets the tidal acceleration to be used in node_swe_deltat().
    * @param t_acc The tidal acceleration.
    * @returns An empty object.
    */
-  export function node_node_swe_set_tid_acc(t_acc: number): {};
+  export function node_swe_set_tid_acc(t_acc: number): {};
 
   /**
    * Normalizes a degree to the range 0 - 360.
    * @param x The degree to normalize.
    * @returns The result of the normalization.
    */
-  export function node_node_swe_degnorm(x: number): number;
+  export function node_swe_degnorm(x: number): number;
 
   /**
    * Normalizes a radian to the range 0 - 2 PI.
    * @param x The radian to normalize.
    * @returns The result of the normalization.
    */
-  export function node_node_swe_radnorm(x: number): number;
+  export function node_swe_radnorm(x: number): number;
 
   /**
    * Return the mid point between two radians.
@@ -109,7 +109,7 @@ declare namespace Util {
    * @param x0 The second radian.
    * @returns The result of the computation.
    */
-  export function node_node_swe_rad_midp(x1: number, x0: number): number;
+  export function node_swe_rad_midp(x1: number, x0: number): number;
 
   /**
    * Return the mid point between two degrees.
@@ -117,7 +117,7 @@ declare namespace Util {
    * @param x0 The second degree.
    * @returns The result of the computation.
    */
-  export function node_node_swe_deg_midp(x1: number, x0: number): number;
+  export function node_swe_deg_midp(x1: number, x0: number): number;
 
   /**
    * Split degrees to sign/nakshatra, degrees, minutes, seconds of arc.
@@ -129,7 +129,7 @@ declare namespace Util {
    *          (degree = degree integer, min = degree minutes, second = degree seconds,
    *           secondFraction = degree fraction of seconds, sign = zodiac sign number)
    */
-  export function node_node_swe_split_deg(
+  export function node_swe_split_deg(
     ddeg: number,
     roundflag: number
   ): {
@@ -145,7 +145,7 @@ declare namespace Util {
    * @param p The centisecond value.
    * @returns The result of the computation.
    */
-  export function node_node_swe_csnorm(p: number): number;
+  export function node_swe_csnorm(p: number): number;
 
   /**
    * Distance in centisecs between p1 and p2 normalized to 0 - 360.
@@ -153,7 +153,7 @@ declare namespace Util {
    * @param p2 The second centisecond value
    * @returns The result of the computation.
    */
-  export function node_node_swe_difcsn(p1: number, p2: number): number;
+  export function node_swe_difcsn(p1: number, p2: number): number;
 
   /**
    * Distance in degrees between p1 and p2.
@@ -161,7 +161,7 @@ declare namespace Util {
    * @param p2 The second degree value.
    * @returns The result of the computation.
    */
-  export function node_node_swe_difdegn(p1: number, p2: number): number;
+  export function node_swe_difdegn(p1: number, p2: number): number;
 
   /**
    * Distance in centisecs between p1 and p2 normalized to -180 - 180.
@@ -169,7 +169,7 @@ declare namespace Util {
    * @param p2 The second centisecond value
    * @returns The result of the computation.
    */
-  export function node_node_swe_difcs2n(p1: number, p2: number): number;
+  export function node_swe_difcs2n(p1: number, p2: number): number;
 
   /**
    * Distance in degrees between p1 and p2 normalized to -180 - 180.
@@ -177,7 +177,7 @@ declare namespace Util {
    * @param p2 The second degree value.
    * @returns The result of the computation.
    */
-  export function node_node_swe_difdeg2n(p1: number, p2: number): number;
+  export function node_swe_difdeg2n(p1: number, p2: number): number;
 
   /**
    * Distance in radians between p1 and p2 normalized to -PI - PI.
@@ -185,28 +185,28 @@ declare namespace Util {
    * @param p2 The second radian value.
    * @returns The result of the computation.
    */
-  export function node_node_swe_difrad2n(p1: number, p2: number): number;
+  export function node_swe_difrad2n(p1: number, p2: number): number;
 
   /**
    * Round centisecond value, but at 29.5959 always down.
    * @param x The centisecond value to round.
    * @returns The result of the computation.
    */
-  export function node_node_swe_csroundsec(x: number): number;
+  export function node_swe_csroundsec(x: number): number;
 
   /**
    * Convert double to long with rounding, no overflow check.
    * @param x The double value to convert.
    * @returns The result of the conversion.
    */
-  export function node_node_swe_d2l(x: number): number;
+  export function node_swe_d2l(x: number): number;
 
   /**
    * Returns the day of week for a Julian day.
    * @param jd The Julian day.
    * @returns Monday = 0, ... Sunday = 6.
    */
-  export function node_node_swe_day_of_week(jd: number): number;
+  export function node_swe_day_of_week(jd: number): number;
 
   /**
    * Converts a centisecond value to a time string.
@@ -215,7 +215,7 @@ declare namespace Util {
    * @param suppressZero Specifies whether to suppress zero values. (0 = no, 1 = yes)
    * @returns The result of the conversion.
    */
-  export function node_node_swe_cs2timestr(
+  export function node_swe_cs2timestr(
     t: number,
     sep: number,
     suppressZero: number
@@ -228,7 +228,7 @@ declare namespace Util {
    * @param mchar Character used for negative values.
    * @returns The result of the conversion.
    */
-  export function node_node_swe_cs2lonlatstr(
+  export function node_swe_cs2lonlatstr(
     t: number,
     pchar: string,
     mchar: string
@@ -239,7 +239,7 @@ declare namespace Util {
    * @param t The centisecond value.
    * @returns The result of the conversion.
    */
-  export function node_node_swe_cs2degstr(t: number): string;
+  export function node_swe_cs2degstr(t: number): string;
 }
 
 export = Util;
