@@ -1,0 +1,1 @@
+docker run --rm --volume $(pwd):/home/node/app --workdir /home/node/app -it node:bullseye /bin/bash
