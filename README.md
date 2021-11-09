@@ -1,7 +1,7 @@
-A progressive Node.js framework for building astrology applications 🌕
+A progressive Node.js library for building astrology applications 🌕
 
 ## **Description**
-Hati is an astrological integrated Node.js framework based on Siwss Ephemeris C Library. It uses modern JavaScript and is built with TypeScript.
+Hati is an astrological integrated Node.js library based on Siwss Ephemeris C library. It uses modern JavaScript and is built with TypeScript.
 
 ## **Development Environment**
 

@@ -1,7 +1,7 @@
 {
   "name": "@hatijs/core",
-  "version": "0.2.1",
-  "description": "A progressive Node.js framework for building astrology applications 🌕",
+  "version": "0.2.3",
+  "description": "A progressive Node.js library for building astrology applications 🌕",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
