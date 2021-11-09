@@ -1,6 +1,6 @@
 {
   "name": "@hatijs/core",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "A progressive Node.js library for building astrology applications 🌕",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
