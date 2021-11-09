@@ -23,7 +23,7 @@
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/hatijs/core/issues",
-    "email": "dev_bjun@meshyarn.io"
+    "email": "hatijs@meshyarn.io"
   },
   "homepage": "https://github.com/hatijs/core#readme",
   "private": false,
