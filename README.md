@@ -1,14 +1,24 @@
-# **HATI**
+A progressive Node.js framework for building astrology applications 🌕
 
-## **About**
-[HATI](https://github.com/devbjun/hati) is Horoscope Astroploy Tool Integration. 
+## **Description**
+Hati is an astrological integrated Node.js framework based on Siwss Ephemeris C Library. It uses modern JavaScript and is built with TypeScript.
 
 ## **Development Environment**
 
 OS: Debian Bullseye
 Language: TypeScript (Node.js)
 
-## **Getting Started**
+## **Installation**
+
+``` bash
+# with npm
+$ npm install --save @hatijs/core
+
+# with yarn
+$ yarn add -D @hatijs/core
+```
+
+## **Quick Started**
 To run nodejs with docker:
 ``` bash
 $ ./run.sh
