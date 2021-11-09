@@ -1,12 +1,12 @@
 {
   "name": "@hatijs/core",
   "version": "0.2.1",
-  "description": "Horoscope Astroploy Tool Integration.",
+  "description": "A progressive Node.js framework for building astrology applications 🌕",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devbjun/hati.git"
+    "url": "git+https://github.com/hatijs/core.git"
   },
   "keywords": [
     "astrology",
@@ -22,10 +22,10 @@
   },
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/devbjun/hati/issues",
+    "url": "https://github.com/hatijs/core/issues",
     "email": "dev_bjun@meshyarn.io"
   },
-  "homepage": "https://github.com/devbjun/hati#readme",
+  "homepage": "https://github.com/hatijs/core#readme",
   "private": false,
   "scripts": {
     "install": "node-gyp rebuild",
